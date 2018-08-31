@@ -1,0 +1,875 @@
+
+<!DOCTYPE html>
+<html lang='zh-Hant'>
+<head prefix='og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# zeczec-com: http://ogp.me/ns/fb/zeczec-com#'>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="dfOvv0VydXV2xtpap3hRTaCzj213lw0umZWoK0QxYGz1z2peAlGEC7a02oyqtePLx0eArbQRlZk9r3UYi2vgtg==" />
+<meta charset='utf-8'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6df56d3465","applicationID":"2801605","transactionName":"JQpcTUVZXVhcF01GAAEAQRZfWVxR","queueTime":4,"applicationTime":846,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='zh_TW' property='og:locale'>
+<meta content='zh_TW' property='og:locale:alternate'>
+<link href='https://www.zeczec.com/assets/logo-square-04c45286e84ea49d07c97c86625fbf3a75f4f32dd02da3ad3ca70a9a68fd0395.png' rel='apple-touch-icon'>
+<link href='https://www.zeczec.com/assets/fav-69601a279a66f2e6e31e508900d4f057559d3affcae42730d045b17d281107a6.png' rel='shortcut icon' type='image/x-icon'>
+<title>嘖嘖 zeczec × 讓美好的事物發生：台灣的群眾集資(Crowdfunding)平台</title>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700|Material+Icons' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" media="all" href="https://www.zeczec.com/assets/zeczec-2838a756633e30486798e3f9cd5594796a618fd7eb4bf296f798de0abd1d23f2.css" />
+<meta content='嘖嘖是一個屬於台灣的群眾集資/群眾募資平台。讓我們集合力量，一起實現夢想。' name='description'>
+<meta content='嘖嘖是一個屬於台灣的群眾集資/群眾募資平台。讓我們集合力量，一起實現夢想。' property='og:description'>
+<meta content='https://www.zeczec.com/assets/logo-cached.jpg' property='og:image'>
+<meta content='https://www.zeczec.com/' property='og:url'>
+<meta content='嘖嘖 zeczec × 讓美好的事物發生：台灣的群眾集資(Crowdfunding)平台' property='og:title'>
+</head>
+<body>
+<header class='b--near-white bb ph0-l ph3 pv2 relative z-2'>
+<div class='cf container'>
+<div class='f6 mv2 flex items-center justify-between'>
+<a clsas="dib order-0" href="https://www.zeczec.com/"><h1 class='gray text-mono hover-logo ma0'>
+<div class='dib logo-safari-fix'><svg class='logo v-mid' style='height: 28px; width: 28px; ' viewBox='0 0 43.2 43.2' xmlns='http://www.w3.org/2000/svg'>
+<title>logo</title>
+<path d='M21.6 0C9.7 0 0 9.7 0 21.6c0 11.9 9.7 21.6 21.6 21.6 11.9 0 21.6-9.7 21.6-21.6C43.2 9.7 33.5 0 21.6 0zm12.9 26.1c0 .3-.2.4-.5.4l-14.7-1.2h-.1c-.2-.1-.3-.3-.3-.5l1.2-3.8v-.1c0-.2-.1-.4-.4-.4l-11.1-1c-.2 0-.4-.2-.4-.4l.2-1.7c0-.3.3-.5.5-.4l15.2 1.4h.1c.2.1.3.3.3.5L23.4 23v.1c0 .2.2.4.4.4l10.7.5c.2 0 .4.2.4.4l-.4 1.7z'></path>
+</svg>
+</div>
+<svg class='v-mid ml2' style='height: 20px; width: 44px; ' viewBox='0 0 64.08 28.95' xmlns='http://www.w3.org/2000/svg'>
+<title>嘖嘖</title>
+<path d='M10.44 11.74h14.2a.6.6 0 0 0 .4-.75.61.61 0 0 0-.4-.44h-5.48a.42.42 0 0 1-.42-.42v-1.6a.42.42 0 0 1 .42-.42h5a.58.58 0 0 0 .42-.64.59.59 0 0 0-.42-.52h-5a.42.42 0 0 1-.42-.42V5.16a.42.42 0 0 1 .42-.42h5.72a.68.68 0 0 0 .42-.69.57.57 0 0 0-.42-.52h-5.72a.42.42 0 0 1-.42-.42V.47a.42.42 0 0 0-.34-.41h-1.67a.42.42 0 0 0-.5.43l.1 2.61a.42.42 0 0 1-.42.43h-5.34a.56.56 0 0 0-.42.55.69.69 0 0 0 .42.67h5.33a.42.42 0 0 1 .42.42v1.36a.42.42 0 0 1-.42.42h-4.74a.58.58 0 0 0-.43.57v.05a.59.59 0 0 0 .42.59h4.75a.42.42 0 0 1 .42.42v1.61a.42.42 0 0 1-.42.42h-5.47a.58.58 0 0 0-.42.59.63.63 0 0 0 .43.54zm14.04 1.73a.42.42 0 0 0-.42-.41H11.33a.7.7 0 0 0-.74.63v9.9a.75.75 0 0 0 .77.75l1.65-.05h10.81a.75.75 0 0 0 .76-.77c0-1.19-.08-3.67-.08-6.7V14.5zm-11.47 1.29a.42.42 0 0 1 .42-.42h8a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-.75.75h-8a.42.42 0 0 1-.42-.42m-5.44-1.53a.42.42 0 0 0 .39-.43c0-1.37-.14-13.17-.14-13.17a.42.42 0 0 0-.42-.42h-7a.42.42 0 0 0-.42.43v13.16a.42.42 0 0 0 .47.42h7.12zm-2-2.41a.42.42 0 0 1-.42.42H2.74a.42.42 0 0 1-.42-.42V8.84a.42.42 0 0 1 .42-.42h2.41a.42.42 0 0 1 .42.42v9.64z'></path>
+<path d='M16.307 23.2l.808 1.057-5.972 4.57a.59.59 0 0 1-.827-.11l-.456-.596a.59.59 0 0 1 .11-.824l5.504-4.21a.59.59 0 0 1 .827.11zM49.01 11.74h14.2a.6.6 0 0 0 .4-.75.61.61 0 0 0-.4-.44h-5.48a.42.42 0 0 1-.42-.42v-1.6a.42.42 0 0 1 .42-.42h5a.58.58 0 0 0 .42-.64.59.59 0 0 0-.42-.52h-5a.42.42 0 0 1-.42-.42V5.16a.42.42 0 0 1 .42-.42h5.72a.68.68 0 0 0 .42-.69.57.57 0 0 0-.42-.52h-5.72a.42.42 0 0 1-.42-.42V.47a.42.42 0 0 0-.34-.41H55.3a.42.42 0 0 0-.5.43l.1 2.61a.42.42 0 0 1-.42.43h-5.32a.56.56 0 0 0-.42.55.69.69 0 0 0 .42.67h5.33a.42.42 0 0 1 .42.42v1.36a.42.42 0 0 1-.42.42h-4.74a.58.58 0 0 0-.43.57v.05a.59.59 0 0 0 .42.59h4.75a.42.42 0 0 1 .42.42v1.61a.42.42 0 0 1-.42.42h-5.47a.58.58 0 0 0-.42.59.63.63 0 0 0 .41.54zm14.04 1.73a.42.42 0 0 0-.42-.41H49.9a.7.7 0 0 0-.74.63v9.9a.75.75 0 0 0 .77.75l1.65-.05h10.81a.75.75 0 0 0 .76-.77c0-1.19-.08-3.67-.08-6.7V14.5zm-11.48 1.29a.42.42 0 0 1 .42-.42h8a.75.75 0 0 1 .75.75v7a.75.75 0 0 1-.75.75h-8a.42.42 0 0 1-.42-.42m-5.41-1.53a.42.42 0 0 0 .39-.43c0-1.37-.14-13.17-.14-13.17a.42.42 0 0 0-.42-.42h-7a.42.42 0 0 0-.42.43v13.16a.42.42 0 0 0 .47.42h7.12zm-2-2.41a.42.42 0 0 1-.42.42h-2.41a.42.42 0 0 1-.42-.42V8.84a.42.42 0 0 1 .42-.42h2.41a.42.42 0 0 1 .42.42v9.64zm-25.984 5.764l.754-.985a.59.59 0 0 1 .827-.11l5.504 4.21a.59.59 0 0 1 .11.825l-.453.596a.59.59 0 0 1-.827.11l-5.9-4.514a.09.09 0 0 1-.02-.126z'></path>
+<path d='M54.943 23.217l.808 1.056-5.97 4.57a.59.59 0 0 1-.826-.11l-.45-.588a.59.59 0 0 1 .11-.827l5.504-4.21a.59.59 0 0 1 .827.11zm1.857 1.037l.753-.985a.59.59 0 0 1 .828-.11l5.506 4.21a.59.59 0 0 1 .11.825l-.455.596a.59.59 0 0 1-.827.11l-5.9-4.514a.09.09 0 0 1-.012-.134zm-5.87-7.534l.11.63a.3.3 0 0 0 .28.29l3.32.16a.3.3 0 0 1 .27.36l-.34 1.23a.3.3 0 0 0 .27.36l6.32.28a.3.3 0 0 0 .31-.3v-.67a.3.3 0 0 0-.29-.29h-3.77a.3.3 0 0 1-.28-.36l.32-1.32a.3.3 0 0 0-.28-.36l-5.87-.29a.3.3 0 0 0-.37.28zm-38.53 0l.11.63a.3.3 0 0 0 .28.29l3.32.16a.3.3 0 0 1 .27.36l-.39 1.23a.3.3 0 0 0 .27.36l6.32.28a.3.3 0 0 0 .31-.3v-.67a.3.3 0 0 0-.29-.29h-3.77a.3.3 0 0 1-.28-.36l.32-1.32a.3.3 0 0 0-.28-.36l-5.87-.29a.3.3 0 0 0-.32.28z'></path>
+</svg>
+</h1>
+</a><div class='b--near-white bn-ns bt db-ns flex-auto inline-flex items-center mh0-ns mt0-ns mt3 nb1 nl3 nr3 order-1-ns order-last pa0-ns ph2 pt2 tc tl-ns w-100 w-auto-ns'>
+<div class='divider dib-ns dn'>&nbsp;</div>
+<a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/categories'>探索</a>
+<a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/stories'>故事牆</a>
+<a class='mr3-ns hover-fg-blue dark-gray flex-auto flex-none-ns' href='/start_project'>提案</a>
+</div>
+<div class='tr order-2'>
+<a aria-label='站內訊息' class='near-black dib gray pa2 mr3 v-mid tooltip tooltip-b' href='/inbox'>
+<i class='material-icons f5 v-mid'>
+notifications_none
+</i>
+</a>
+<div class='js-activatable relative dib' data-userid='147145'>
+<button aria-label='個人選單' class='js-activatable-trigger button-text' type='button'>
+<div class='button button-s button-avatar round w2 h2'><img class="w-100 h-100" src="https://graph.facebook.com/1214685991887912/picture?width=60&amp;height=60" alt="Picture?width=60&amp;height=60" /></div>
+<i class='material-icons f4 v-mid'>arrow_drop_down</i>
+</button>
+<div class='dropdown r f6 tc w4'>
+<a class='near-black db ph3 pv2 hover-blue db dn-l' href='/categories'>探索</a>
+<a class='near-black db ph3 pv2 hover-blue db dn-l' href='/start_project'>提案</a>
+<div class='bt db dn-l mv2 b--light-gray'></div>
+<a class='near-black db ph3 pv2 hover-blue bb b--light-gray' href='/users/acerxp511'>
+個人頁面
+</a>
+<a class='near-black db ph3 pv2 hover-blue' href='/account'>
+贊助記錄
+</a>
+<a class='near-black db ph3 pv2 hover-blue' href='/users/following'>
+追蹤計畫
+</a>
+<a class='near-black db ph3 pv2 hover-blue' href='/users/projects'>
+提案記錄
+</a>
+<a class='near-black db ph3 pv2 hover-blue bt b--light-gray' href='/settings'>
+帳號設定
+</a>
+<a class='near-black db ph3 pv2 hover-blue bb b--light-gray' href='/memberships'>
+團隊設定
+</a>
+<form class="db ma3" id="edit_user_147145" action="/users/sign_out" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="delete" /><input type="hidden" name="authenticity_token" value="efBTC306eiQC2rwtqtI88xiC+187bGdvLD1wqUwnZIj5zJbqOhmLWsKovPunH451f3b0n/jq/9iIB62ag33kUg==" /><button name="button" type="submit" class="button red button-s w-100">登出</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class='container'></div>
+<div class='container mt3-l'>
+<div class='mb3 dn db-ns'>
+<a class='br2-l overflow-hidden aspect-ratio-project-cover cover bg-center db relative' href='/projects/killedbyrocknroll' style="background-image: url('https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_56088_image_original.jpg')">
+<div class='absolute absolute--fill bg-faded-black b-2-l'>&nbsp;</div>
+<div class='absolute absolute-center tc white mw7 w-100 ph3'>
+<span class='bb mb3 dib f7 lh-title'>剩下 10 天</span>
+<div class='f3-l f4 lh-title'>
+搖滾樂殺人事件｜電影首映X現場演唱X原聲帶一次嗨爆！支持最台搖滾樂饗宴計畫
+</div>
+<span class='button ma3 b'>查看計畫內容 &blacktriangleright;</span>
+</div>
+</a>
+</div>
+</div>
+<div class='db dn-ns mb4 mt3 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/killedbyrocknroll'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58700_image_big.png?1535676661'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>搖滾樂殺人事件｜電影首映X現場演唱X原聲帶一次嗨爆！支持最台搖滾樂饗宴計畫</h3>
+</a>
+<span class='f7'>
+電影動畫 By
+<a href="/users/yao-gun-le-sha-ren-shi-jian1">搖滾樂殺人事件</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+董事長樂團-X滅火器X Trash X八十八顆芭樂籽，跨團打造電影「搖滾樂殺人事件」！主角楊大正、林頤原、阿強現場...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 89%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$267,816
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 10 天
+</span>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='mv3 pv3 ph3 ph0-l'>
+<a class='fr button mv3-ns nt2' href='/categories?type=one-time'>更多 &blacktriangleright;</a>
+<h2 class='f4 f3-ns mv0 mv3-ns'>一次性計畫</h2>
+</div>
+<div class='container'>
+<div class='flex gutter3-l'>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/paipaipets-catkennel'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_57151_image_big.jpg?1534411246'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>拍拍原木貓砂櫃-還你清爽環境，留給貓咪私密空間。</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/paipaipets">拍拍</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+創造人與寵物家的新風景，有效解決落砂問題，貓廁所大變身， 完美轉身成為獨立質感家具
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 93%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$187,500
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 47 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/dumdum'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_55215_image_big.jpg?1533113336'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>【摩艾御守】扭蛋玩具DumDum｜桌上小物</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/duke0920646377">堅果創意工作室</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+傳說中拉帕奴伊島原本有兩個種族，因為守護衝突與儀式的原因而建造石像。（全共4款）每款髮型可互換，【事業、防小人、學...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$326,380
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 32 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/HisPerfectDeadEX'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_53384_image_big.jpg?1531912440'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>喜劇鬼片《亡牌前女友》驅鬼資金募集中</h3>
+</a>
+<span class='f7'>
+電影動畫 By
+<a href="/users/sonia8066">林亮君</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+不是知名學校的畢業作品，沒拍長鏡頭也沒談響亮的議題，既不文青，也不覺青，但⋯⋯我⋯⋯我⋯⋯我覺得我們拍得好好喔！
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$268,730
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 14 小時
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/turnula'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_56226_image_big.jpg?1533997541'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>Turnula 雙向鍋鏟 - 有把好鏟子、順手一輩子 !</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/aciao1">Turnula</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+您是不是覺得鍋子愈小愈難炒，炒菜吊手又不舒適？Turnula雙向鍋鏟針對現代家庭設計，提供了多方向的操作角度，手法...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$218,970
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 60 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/mosnxue'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58389_image_big.jpg?1535509382'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>《對不起，我存在的這個世界沒有神》男體影像紀錄社會賦予虔誠沮喪無力的獨立出版計畫</h3>
+</a>
+<span class='f7'>
+出版 By
+<a href="/users/mosnxue">末生学</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+末生学進行男體影像與文字的創作，透過文字寫下生活百感貫穿全裸入鏡的男體影像，真實紀錄社會賦予我虔誠的沮喪，映照出我...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 18%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$18,800
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 60 天
+</span>
+</div>
+</div>
+</div>
+<div class='db-ns dn mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/killedbyrocknroll'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58700_image_big.png?1535676661'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>搖滾樂殺人事件｜電影首映X現場演唱X原聲帶一次嗨爆！支持最台搖滾樂饗宴計畫</h3>
+</a>
+<span class='f7'>
+電影動畫 By
+<a href="/users/yao-gun-le-sha-ren-shi-jian1">搖滾樂殺人事件</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+董事長樂團-X滅火器X Trash X八十八顆芭樂籽，跨團打造電影「搖滾樂殺人事件」！主角楊大正、林頤原、阿強現場...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 89%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$267,816
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 10 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/room-collection-2-0'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58286_image_big.png?1535388427'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>貓事 / Room Collection 2.0 / 環保模組貓屋</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/a-cat-thing1">A Cat Thing</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+強化紙板承重 20 公斤 | 環保 - 貓屋、連接片、外包裝 100% 可回收
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 2%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$2,280
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 60 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/lazy-bulb'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_55120_image_big.png?1533056260'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>〔懶人 x 燈泡〕- 夠智慧，才夠&quot;懶&quot;</h3>
+</a>
+<span class='f7'>
+科技 By
+<a href="/users/s9013xx">WOWS - Technology</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+科技始終來自於人性，而人性終究是惰性，只有夠智慧的產品才能讓您享受惰性，因此我們團隊研發出了〔懶人 x 燈泡〕讓您...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 92%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$463,737
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 32 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/cwlf'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_53084_image_big.jpg?1531723170'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>還給孩子真正的暑假｜弱勢兒童長假營養資助計畫</h3>
+</a>
+<span class='f7'>
+公益 By
+<a href="/users/cwlf">兒童福利聯盟文教基金會</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+兒福聯盟九年前看到了弱勢學童在長假期間因為少了營養午餐，而面臨吃不飽的問題，甚至需照顧小小孩、打工賺學費。暑假面臨...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$1,032,500
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 7 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/Cozy-food-box'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_52906_image_big.jpg?1531478558'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>鎖住新鮮、聰明收納 / COZY FOOD BOX 機能飼料箱</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/SPUTNIK">SPUTNIK</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+強化寵食保鮮和小物零食的收納效能，簡約時尚的外型設計，重新定位寵食存放的新形態。
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$2,479,690
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 11 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/changer'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_56716_image_big.jpg?1534234402'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>不缺電計畫-改變世界的藍牙耳機</h3>
+</a>
+<span class='f7'>
+科技 By
+<a href="/users/with49101">49101</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+出門帶線很麻煩對吧？那就讓藍牙耳機進化吧！從此以後不管手機、耳機的充電困擾，從此一勞永逸！
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$4,739,238
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 29 天
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/kablecard'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_47981_image_big.jpg?1527493211'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>KableCARD︱都市生存卡-搞定充電所有事, 城市生存必備!</h3>
+</a>
+<span class='f7'>
+科技 By
+<a href="/users/alan-lim">Advance Design</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+所有你需要的充電線都在這裡『KableCARD 』信用卡大小搞定充電所有事! 輕鬆帶著走!!
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$2,876,415
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>timelapse</i>剩下 11 天
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='tc mb5'><div class="button-group mt3"><span class="button button-s disabled gray">上一頁</span> <span class="button button-s disabled bg-near-white dn dib-ns">1</span> <a rel="next" class="button button-s dn dib-ns" href="/?page=2">2</a> <a class="button button-s dn dib-ns" href="/?page=3">3</a> <span class="button button-s disabled gray dn dib-ns">&hellip;</span> <a class="button button-s dn dib-ns" href="/?page=8">8</a> <a class="button button-s" rel="next" href="/?page=2">下一頁</a></div></div>
+</div>
+</div>
+<div class='bt b--light-gray mb5'>
+<div class='container'>
+<div class='mv3 pv3 ph3 ph0-l'>
+<a class='fr button mv3-ns nt2' href='/categories?type=subscriptions'>更多 &blacktriangleright;</a>
+<h2 class='f4 f3-ns mv0 mv3-ns'>訂閱式計畫</h2>
+</div>
+<div class='flex gutter3-l'>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/simpleinfo'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_15902_image_big.png?1490625985'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>訂閱式鍵盤革命：一起讓更多社會議題變得簡單好懂！by 圖文不符</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/simpleinfo">圖文不符</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+最新專題「出櫃那件小事」溫暖上線！馬上贊助還能加價獲得限量超精美商品喔！
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$91,865
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/wuowuo'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_41427_image_big.jpg?1520853005'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>窩窩 — 為動物燒聲的報導計畫</h3>
+</a>
+<span class='f7'>
+出版 By
+<a href="/users/wuo-wuo">窩窩</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+永遠不要去懷疑那一小群有理想有抱負的公民可以改變世界，事實上，世界的改變向來全靠這群人。
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$16,260
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/mondayschool'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_43335_image_big.png?1522404252'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>週一學校：一起打造屬於每個人的舞蹈平台吧！</h3>
+</a>
+<span class='f7'>
+藝術 By
+<a href="/users/mondayschool">小事製作</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+週一學校（Monday School）是小事製作在華山新生橋下發起的表演藝術共學工作坊，以舞蹈為媒介，結合多元的表...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$34,183
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/kyonbook-premium'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_54461_image_big.jpg?1532683138'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>冏說書：提升自我、改變社會，七位知名作者帶你遊歷書本的新世界！</h3>
+</a>
+<span class='f7'>
+教育 By
+<a href="/users/kyontw">冏星人</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+由冏星人和其他各領域知名作者共同創作，每月為你精心解說兩本書、直播分享超過四本書。
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$226,750
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/mplus'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_36928_image_big.png?1516101793'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>MPlus影樂書年代誌：因為有你，才能直到未來</h3>
+</a>
+<span class='f7'>
+出版 By
+<a href="/users/mplus">MPlus</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+MPlus影樂書年代誌自 2013 年六月上線以來，已經用最精簡的人力為華文閱讀界貢獻了 1,879 篇文章，其中...
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$60,143
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-50-m w-third-l'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/Eisland'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_49368_image_big.jpg?1528685371'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>《一張圖搞懂》Mobile上的13堂英文課 - 6分鐘找回英文語感</h3>
+</a>
+<span class='f7'>
+教育 By
+<a href="/users/Eisland">英語島</a>
+</span>
+<p class='mt3 dark-gray mb4'>
+教英文很難，但是用畫的就很簡單。學英文很痛苦，但是有圖就很過癮。
+</p>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--purple br2 bt bw1' style='width: 100%'></div>
+<div class='b--light-gray br2 bt bw1 mb2'></div>
+<div class='fr b'>
+$69,884
+<span class='f7'>/ 每月</span>
+</div>
+<span class='f7'><i class='material-icons f6 v-mid gray mr1'>all_inclusive</i>長期訂閱
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='tc mb5'><div class="button-group mt3"><span class="button button-s disabled gray">上一頁</span> <span class="button button-s disabled bg-near-white dn dib-ns">1</span> <a rel="next" class="button button-s dn dib-ns" href="/?m_page=2">2</a> <a class="button button-s" rel="next" href="/?m_page=2">下一頁</a></div></div>
+</div>
+</div>
+<div class='bt b--light-gray mb5-l pt5-l'>
+<div class='container'>
+<a class='br2-l overflow-hidden aspect-ratio-project-cover bg-black-70 cover bg-center db relative' href='/projects/robelf/updates/3669?utm_campaign=homepage_update&amp;utm_source=site' style="background-image: url('https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58338_image_original.png?1535454157')">
+<div class='absolute absolute--fill b-2-l' style='background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.4), rgba(0,0,0,.6))'>&nbsp;</div>
+<div class='absolute absolute--fill white mw6 w-100 pl4 flex'>
+<div class='self-center'>
+<div class='dib bg-black white mb3 f7 pv1 ph2'>計畫更新</div>
+<div class='dib f7 ml2'>Robelf 小貝機器人 — 您的家庭新夥伴</div>
+<div class='f3-ns f4 mb3 b'>【🤖Robelf x 🏆STEAM教育】讓孩子跟著小貝一起動手做、玩中學！</div>
+<p>小孩看到小貝會照著他設計的行為去執行，既開心又有成就感...</p>
+<div class='button mt3 button-s'>完整計畫更新</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class='bt b--light-gray mb5'>
+<div class='container'>
+<div class='mv3 pv3 ph3 ph0-l'>
+<a class='fr button mv3' href='/categories'>更多 &blacktriangleright;</a>
+<h2>近期成功計畫</h2>
+</div>
+<div class='flex gutter3-l'>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/revolvecoinstorage'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_58390_image_big.jpg?1535510844'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>轉轉零錢盒 | 最隨性的零錢收納</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/mordeco">mordeco</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$1,176,720
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2018/08/31
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/coca-koala'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_54690_image_big.jpg?1532919770'>&nbsp;</div>
+<h3 class='mt3 mb0 b'> Coca-Koala「老宅歌」動漫不插電專輯募資計畫</h3>
+</a>
+<span class='f7'>
+音樂 By
+<a href="/users/sosogodfrey">曾威豪</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$301,238
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2018/08/31
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/QQder'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_53060_image_big.jpg?1531712336'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>來自溫泉之鄉的故事型桌上遊戲 -《邂逅，新北投》</h3>
+</a>
+<span class='f7'>
+遊戲 By
+<a href="/users/sosostudio">艸艸設計</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$223,899
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2018/08/31
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/cross-sling'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_53708_image_big.jpg?1532099539'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>CROSS SLING 跨界百變包 by CYCOP——變換自在的聰明選擇</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/cycop">CYCOP</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$888,300
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2018/08/30
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='bt b--light-gray mb5'>
+<div class='container'>
+<div class='mv3 pv3 ph3 ph0-l'>
+<h2>經典計畫</h2>
+</div>
+<div class='flex gutter3-l'>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/flipbag'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_8499_image_big.jpg?1464606893'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>一秒變換風格，只要翻轉背包 - FlipBag™ by Allrover™</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/allrover">Allrover</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$69,245,122
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2016/08/10
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/allrover'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_1770_image_big.jpg?1407322904'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>Stair-Rover™ - 八輪滑板讓你遨遊城市 毫無阻攔</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/allrover">Allrover</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$39,062,040
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2014/10/20
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/pockeat'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_21379_image_big.png?1493706355'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>Pockeat - 口袋裡的便當盒</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/agooday">好日子 agooday</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$24,040,768
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2017/06/26
+</div>
+</span>
+</div>
+</div>
+</div>
+<div class='mb4 w-100 w-25-l w-50-m'>
+<div class='black project gray mh3 mb3 pb4 relative h-100'>
+<a class='db' href='/projects/sleepytofu'>
+<div class='br2 mb3 bg-near-white aspect-ratio-project-cover' data-bg-src='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_47042_image_big.jpg?1526445524'>&nbsp;</div>
+<h3 class='mt3 mb0 b'>眠豆腐 | 躺一秒就不想起來的台灣製手工床墊</h3>
+</a>
+<span class='f7'>
+設計 By
+<a href="/users/sleepytofu">眠豆腐</a>
+</span>
+<div class='mt3'></div>
+<div class='w-100 absolute bottom-0 mb3 black'>
+<div class='absolute b--light-green br2 bw1' style='width: 100%'></div>
+<div class='bw1 mb2 b--light-gray br2'></div>
+<div class='fr b'>
+$19,340,824
+</div>
+<span class='f7'>
+<div class='gray'><span class='b'>成功</span>於 2018/07/06
+</div>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class='pt5 pb6 f6 bt light-gray relative'>
+<div class='container dark-gray'>
+<div class='flex ph0-l ph3'>
+<div class='w-third-l w-100 mt-child-0 mb0-l mb4'>
+<h3>社群</h3>
+<a class='db' href='https://facebook.com/zeczec.com'>Facebook</a>
+<a class='db' href='https://instagram.com/zeczec_com'>Instagram</a>
+<a class='db' href='https://twitter.com/zeczec_com'>Twitter</a>
+</div>
+<div class='w-third-l w-100 mt-child-0 mb0-l mb4'>
+<h3>幫助</h3>
+<a class='db' href='/faq'>常見問答</a>
+<a class='db' href='/docs/terms_of_service'>使用條款</a>
+<a class='db' href='/docs/privacy'>隱私權政策</a>
+</div>
+<div class='w-third-l w-100 mt-child-0 mb0-l mb4 relative'>
+<h3>
+關於
+</h3>
+<a class='db' href='/about'>關於我們</a>
+<a class='db' href='/brand'>商標資源</a>
+<div class='f7 mt3'>&copy; 嘖室股份有限公司</div>
+<a class='absolute-l top-0 right-0 mt3 dib relative' href='/'><svg class='logo mr2 middle' style='height: 28px; width: 28px; ' viewBox='0 0 43.2 43.2' xmlns='http://www.w3.org/2000/svg'>
+<title>logo</title>
+<path d='M21.6 0C9.7 0 0 9.7 0 21.6c0 11.9 9.7 21.6 21.6 21.6 11.9 0 21.6-9.7 21.6-21.6C43.2 9.7 33.5 0 21.6 0zm12.9 26.1c0 .3-.2.4-.5.4l-14.7-1.2h-.1c-.2-.1-.3-.3-.3-.5l1.2-3.8v-.1c0-.2-.1-.4-.4-.4l-11.1-1c-.2 0-.4-.2-.4-.4l.2-1.7c0-.3.3-.5.5-.4l15.2 1.4h.1c.2.1.3.3.3.5L23.4 23v.1c0 .2.2.4.4.4l10.7.5c.2 0 .4.2.4.4l-.4 1.7z'></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<div class='pa3 z-5 bt b--moon-gray w-100 relative bg-near-white fixed bottom-0 js-cookie-banner' hidden>
+<div class='container pv4-ns'>
+<div class='flex-ns flex-nowrap items-center'>
+<div class='f6 mr3-ns'>
+<p class='mt0'>
+嘖嘖網站以及嘖嘖網站使用的第三方服務利用必要的瀏覽器 cookies 技術達成部分網站必須功能。若有興趣了解更多相關資訊或反悔同意的條款，請詳閱我們的<a class='underline dark-gray' data-track='GDPR#ClickPrivacy' href='/docs/privacy'>隱私權政策</a>及
+<a class='underline dark-gray' data-track='GDPR#ClickCookies' href='/cookies'>cookies 需求</a>
+。
+</p>
+<p class='mb0-ns'>點下此通知窗以外的任何連結或按鈕、捲動這個頁面、或以任何方式繼續使用嘖嘖網站，代表你同意了我們的隱私權政策及 cookies 存取。</p>
+</div>
+<button class='button f6 bg-dark-green white js-accept-cookies bn' data-track='GDPR#ClickAccept' type='button'>接受 & 關閉</button>
+</div>
+</div>
+</div>
+<script src="https://www.zeczec.com/assets/zeczec-2038701b3d6f448ac7b2788dcfd7c3af7e0f2aef38b8508efb5305babd721bfb.js"></script>
+<div id='fb-root'></div>
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+</script>
+<script>
+  fbq('init', '465239610292033');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height='1' width='1' alt='' class='pixel' style='visibility:hidden' src='https://www.facebook.com/tr?id=465239610292033&amp;ev=PageView&amp;noscript=1&amp;cd[value]=0&amp;cd[currency]=TWD' /></noscript>
+</body>
+</html>
