@@ -18,6 +18,8 @@
 </title>
 <link href='https://fonts.googleapis.com/css?family=Karla:400,700|Material+Icons' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" media="all" href="https://www.zeczec.com/assets/zeczec-2838a756633e30486798e3f9cd5594796a618fd7eb4bf296f798de0abd1d23f2.css" />
+<!-- <link rel="stylesheet" media="all" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" /> -->
+
 <meta content='171735882933694' property='fb:app_id'>
 <meta content='zeczec-com:project' property='og:type'>
 <meta content='嘖嘖 × 拍拍原木貓砂櫃-還你清爽環境，留給貓咪私密空間。' property='og:title'>
@@ -31,6 +33,9 @@
 <meta content='創造人與寵物家的新風景，有效解決落砂問題，貓廁所大變身， 完美轉身成為獨立質感家具  ' name='twitter:description'>
 <meta content='https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/asset_57151_image_original.jpg?1534411246' name='twitter:image'>
 <meta content='zeczec.com' name='twitter:domain'>
+
+<link href="./css/jquery.modal.min.css" rel="stylesheet">
+
 </head>
 <body>
 <header class='b--near-white bb ph0-l ph3 pv2 relative z-2'>
@@ -142,7 +147,7 @@ By
 </text>
 </svg>
 <div class='f3 b js-sum-raised vive_goal_reach'>$187,500</div>
-<div class='f7 mt2 vive_goalzf'>
+<div class='f7 mt2 vive_goal zf'>
 目標 $200,000
 </div>
 </div>
@@ -247,7 +252,10 @@ FB
 </div>
 <div class='w-30-l ph3-l ph0 flex-ns flex-wrap flex-column-l w-100'>
 <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
-<a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow " href="/projects/paipaipets-catkennel/orders/back_project?selected_reward=11520#details"><img width="100%" class="mb2 round-s" src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/2456/options/11520_banner.jpg?1534406264" alt="11520 banner" />
+<a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow " rel="modal:open"
+data-toggle="modal" href="#ex1"><img width="100%" class="mb2 round-s" src="#" 
+  
+  alt="11520 banner" />
 <div class='black b f4'>
 Viveport Subsribe Quota
 </div>
@@ -268,10 +276,11 @@ Viveport Subsribe Quota
 </a>
 </div>
 <div class='w-100-l w-50-ns ph3 ph0-l flex-none self-start'>
-<a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow " href="/projects/paipaipets-catkennel/orders/back_project?selected_reward=11519#details"><img width="100%" class="mb2 round-s" src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/2456/options/11519_banner.jpg?1534406341" alt="11519 banner" />
+<a class="pa3 ba bw1 b--inherit round-s light-gray mb4 db border-rainbow " href="#"><img width="100%" class="mb2 round-s" src="https://s3-ap-northeast-1.amazonaws.com/zeczec-prod/projects/2456/options/11519_banner.jpg?1534406341" alt="11519 banner" />
   <div class='black b f4'>
       Subscribe Quota + $200
       </div>
+        
       <div class='f7 mv2'>
       </div>
       <div class='black f6 mv-child-0 maxh5 maxh-none-ns overflow-auto'><p>【Subscribe Quota + $200】</p>
@@ -412,6 +421,22 @@ $29,800
 </div>
 </div>
 </div>
+<div id="ex1" class="modal">
+    <p>贊助多少Quota <br>
+    1 quota = 30 vcoin</p>
+    <select>
+      <option>1 Quota (30 vcoin)</option>
+      <option>2 Quota</option>
+      <option>3 Quota</option>
+      <option>4 Quota</option>
+      <option>5 Quota</option>
+    </select>
+
+    <br>
+    <a href="#" class="button" rel="modal:close">Make Investment</a>
+  </div>
+    
+
 <script src="https://www.zeczec.com/assets/zeczec-2038701b3d6f448ac7b2788dcfd7c3af7e0f2aef38b8508efb5305babd721bfb.js"></script>
 <script>
   ga('create', 'UA-88163684-1', 'auto', 'clientTracker')
@@ -439,6 +464,8 @@ $29,800
 
 <script src="./library/jquery.min.js"></script>
 <script src="./library/jquery.cookie.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="./library/jquery.modal.min.js"></script>
 
 <script>
  $(function() {
@@ -446,13 +473,13 @@ $29,800
 
     console.log(cookieData);
 
-    var goal = parseInt( cookieData["vive_goal"] );
+    var goal = parseInt( cookieData["goal"] );
     var goal_reach = goal * 0.7;
 
     $(".vive_title").html(cookieData["title"]);
     $(".vive_content").html(cookieData["content"]);
-    $(".vive_goal_reach").html(goal_reach);
-    $(".vive_goal").html(goal);
+    $(".vive_goal_reach").html("$"+goal_reach);
+    $(".vive_goal").html("$"+goal);
 
   });
 </script>
