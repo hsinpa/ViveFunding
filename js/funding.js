@@ -29,6 +29,7 @@ $(function() {
 
         dataBase["title"] = $(this).find("input[name=title]").val();
         dataBase["youtube"] = $(this).find("input[name=youtube]").val();
+        dataBase["goal"] = $(this).find("input[name=goal]").val();
 
         console.log(dataBase);
 
@@ -44,6 +45,7 @@ $(function() {
         $.cookie('funding_info', JSON.stringify(dataBase) );
         console.log( $.cookie('funding_info'));
 
+        window.location.href = "content.html";
         // ChangeIDClass("funding_back", "funding_front");
         
     });
